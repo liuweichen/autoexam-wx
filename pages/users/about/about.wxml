@@ -1,0 +1,15 @@
+<!-- pages/users/about/about.wxml -->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">关于</view>
+</cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于AutoExam-WX</view>
+  <view class='text-content'>
+    <view class='margin-top-sm'>
+      该项目是一款题库小程序，用于有效记忆，帮助大家通过考试。快来试试吧！
+    </view>
+    <view class='margin-top-sm'>本项目运用高颜值的Color UI组件库。</view>
+    <view class='margin-top-sm text-center text-cyan'>更多功能敬请期待！</view>
+  </view>
+</view>

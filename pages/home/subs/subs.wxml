@@ -1,0 +1,19 @@
+<!--pages/sub/subs/subs.wxml-->
+<cu-custom bgColor="bg-yellow" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">章节</view>
+</cu-custom>
+<scroll-view scroll-y="{{modalName==null}}" class="scrollPage {{modalName!=null?'show':''}} ">
+<view class="page">
+  <scroll-view scroll-y class="section" style="height:{{windowHeight-71}}px;">
+    <view class="page_scroll_item" wx:for="{{items}}" wx:for-item="key" id="{{key}}" bindtouchstart="touchstart" bindtouchend="touchend" bindtap="itemtap">
+              <view class="cu-bar  bg-white solid-bottom">
+        <view class="action">
+          <text class="cuIcon-title text-blue"></text>
+          {{key}}
+        </view>
+        </view>
+    </view>
+  </scroll-view>
+</view>
+</scroll-view>

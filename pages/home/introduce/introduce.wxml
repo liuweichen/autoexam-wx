@@ -1,0 +1,24 @@
+<!--pages/introduce/introduce.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">使用说明</view>
+    </cu-custom>
+
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg  '>
+    <view class='text-left margin-bottom text-lg  text-black text-bold'>
+        <text class="text-bold text-cyan ">丨</text>
+    小程序简介</view>
+    <view class='text-grey text-df'>
+        <view class='margin-top-sm '>
+            本软件是一个刷题软件,用于有效记忆,帮助大家通过考试。快来试试吧！
+        </view>
+
+<text>
+
+有疑问，请留言，谢谢合作！
+
+</text>
+        <view class='margin-top-sm text-center text-cyan'>更多功能敬请期待！</view>
+    </view>
+</view>

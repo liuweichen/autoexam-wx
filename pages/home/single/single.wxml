@@ -1,0 +1,41 @@
+<!-- pages/main/single/single.wxml -->
+<cu-custom bgColor="bg-yellow" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">试题</view>
+</cu-custom>
+<scroll-view scroll-y="{{modalName==null}}" class="scrollPage {{modalName!=null?'show':''}} ">
+  <view class="page">
+    <scroll-view scroll-y style="height:{{titleHeight}}px;">
+      <view class='text-black text-df text-lg padding'>
+        <view class='margin-top-sm '>{{item[1]}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{opsHeight}}px; margin-top:8px;">
+    <view class="margin-top-xl flex flex-direction padding-bottom-xl">
+      <button id='A' class="cu-btn lg margin-bottom-sm" bindtap="btnOpClick" style="background-color: {{bcA}};">
+        {{item[2]}}
+      </button>
+      <button id='B' class="cu-btn lg margin-bottom-sm " bindtap="btnOpClick" style="background-color: {{bcB}};">
+        {{item[3]}}
+      </button>
+      <button id='C' class="cu-btn lg margin-bottom-sm " bindtap="btnOpClick" style="background-color: {{bcC}};">
+        {{item[4]}}
+      </button>
+      <button id='D' class="cu-btn lg margin-bottom-sm " wx:if="{{item.length >= 6}}" bindtap="btnOpClick" style="background-color: {{bcD}};">
+        {{item[5]}}
+      </button>
+      <button id='E' class="cu-btn lg margin-bottom-sm " wx:if="{{item.length >= 7}}" bindtap="btnOpClick" style="background-color: {{bcE}};">
+        {{item[6]}}
+      </button>
+      </view>
+    </scroll-view>
+    <view class="page_bottom">
+      <view class="page_bottom_left" bindtap="showRight">答案</view>
+      <picker value="{{index}}" range="{{pickerMsg}}" bindchange="bindPickerChange">
+        <view class="page_bottom_msg">{{index+1}}/{{tishu}}</view>
+      </picker>
+      <view class="page_bottom_last" bindtap="lastQuestion">◁</view>
+      <view class="page_bottom_next" bindtap="nextQuestion">▷</view>
+    </view>
+  </view>
+</scroll-view>
